@@ -1,0 +1,11 @@
+<td>
+<select name="monthyear">
+			<?php $datesoftables=$vkdb->query("SELECT * FROM monthyeartableid ORDER BY tableid DESC LIMIT 0,20" );
+			while ($dates = $datesoftables->fetch_object()){
+			?>
+   <option value="<?php echo $dates->monthyear;?>"><?php echo $dates->monthyear;?> </option>
+			<?php
+			}
+			?>    
+  </select>
+ </td>
